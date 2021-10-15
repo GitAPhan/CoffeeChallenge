@@ -1,0 +1,77 @@
+@import 'global';
+@import 'colors';
+
+.front_page {
+	position: absolute;
+	height: 101%;
+	width: 100%;
+	display: grid;
+	place-items: center;
+	background-image: url(http://loremflickr.com/g/400/800/coffee);
+	background-position: center;
+	overflow: hidden;
+
+
+	>a {
+		display: block;
+		position: relative;
+		color: rgb(196, 186, 186);
+		text-decoration: none;
+		padding: 15px;
+		width: 80%;
+		// margin: 20px 20px 5px;
+		text-align: center;
+		opacity: 80%;
+	}
+
+	>p {
+		position: relative;
+		color: white;
+		text-decoration: underline;
+		font-weight: 100;
+		font-size: 0.8em;
+		// z-index: 2;
+	}
+
+	div {
+		display: grid;
+		grid-auto-flow: column;
+		place-items: center;
+		position: relative;
+		align-self: end;
+		// z-index: 2;
+	}
+
+	.coffee_logo {
+		border-radius: 20px;
+		width: 30px;
+	}
+
+	.coffee_text {
+		color: white;
+		font-size: 3em;
+		font-weight: 100;
+	}
+
+		:nth-child(2) {
+		align-self: start;
+		
+	// 	// margin-top: 510px;
+	// 	background-color: $color_six;
+	// 	border-radius: 15px;
+	}
+
+	:nth-child(3) {
+		background-color: $color_six;
+		border-radius: 15px;
+	}
+
+	:nth-child(4) {
+		background-color: $color_two;
+		border-radius: 15px;
+	}
+}
+
+body {
+	overflow: hidden;
+}
