@@ -11,13 +11,15 @@ img, iframe {
 .front_page {
   position: absolute;
   height: 101%;
-  width: 100%;
+  width: 101%;
   display: -ms-grid;
   display: grid;
   place-items: center;
   background-image: url(http://loremflickr.com/g/400/800/coffee);
   background-position: center;
   overflow: hidden;
+  -ms-grid-rows: 2fr 3fr 3fr 1fr;
+      grid-template-rows: 2fr 3fr 3fr 1fr;
 }
 
 .front_page > a {
@@ -29,6 +31,7 @@ img, iframe {
   width: 80%;
   text-align: center;
   opacity: 80%;
+  margin-bottom: 20px;
 }
 
 .front_page > p {
@@ -69,11 +72,34 @@ img, iframe {
 .front_page :nth-child(3) {
   background-color: #9d4616;
   border-radius: 15px;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
 .front_page :nth-child(4) {
   background-color: #070504;
   border-radius: 15px;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+#button {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  bottom: -50vw;
+  opacity: 0;
+  z-index: 4;
+}
+
+#button:checked {
+  display: none;
+}
+
+#button:checked~.front_page {
+  display: none;
 }
 
 body {
